@@ -1,0 +1,19 @@
+def calculate_discount(price, discount_percent):
+
+    discount_decimal = discount_percent / 100  # Getting the decimal
+   
+    discount_amount = price * discount_decimal  # Multiplying the price with the decimal from dicsount_percent to get the discount amount
+    
+    final_price = price - discount_amount  # Getting the final price after applying discount
+
+
+    if discount_percent >= 20:
+        return final_price
+    else:
+        return price
+    
+original_price = float(input("Enter the original price here"))
+discount_percentage = float(input("Enter the discount percentage here"))
+
+final_price = calculate_discount(original_price, discount_percentage)
+print(f"Final price: {final_price}")
